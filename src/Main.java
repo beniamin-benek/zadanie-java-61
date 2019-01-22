@@ -21,9 +21,9 @@ public class Main {
             Room room1 = new Room(temperature, minTemperature, hasConditioner);
 
             showInfo(room1);
-            reducingProccess(room1);
-            reducingProccess(room1);
-            reducingProccess(room1); //trzy wywołania
+            reducingProcess(room1);
+            reducingProcess(room1);
+            reducingProcess(room1); //trzy wywołania
         }
 
     }
@@ -34,7 +34,7 @@ public class Main {
         System.out.println("Czy w pokoju jest klimatyzator? " + room.getConditioner() +"\n");
     }
 
-    static void reducingProccess(Room room) {
+    static void reducingProcess(Room room) {
         if (!room.getConditioner()) //tylko na potrzeby komunikatu, reduceTemperature zwróci false
             System.out.println("Brak klimatyztora.");
         else if(room.getTemperature() == room.getMinTemperature()) //tylko na potrzeby komunikatu, reduceTemperature zwróci false
